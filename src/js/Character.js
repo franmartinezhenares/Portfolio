@@ -21,7 +21,10 @@ class Character extends GameObject {
 
         if(this.isPlayerControlled && this.movingProgressRemaining === 0 && state.arrow) {
             this.direction = state.arrow;
-            this.movingProgressRemaining = 1;
+
+            console.log(state.map.isSpaceTaken(this.x, this.y, this.direction));
+           
+            this.movingProgressRemaining = 120;
         }
     };
 

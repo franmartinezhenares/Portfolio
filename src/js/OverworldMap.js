@@ -9,12 +9,16 @@ class OverworldMap {
         this.upperMap.src = config.upperSrc;
     }
 
-    drawLowerMap(ctx) {
-        ctx.drawImage(this.lowerMap, 0, 0)
+    drawLowerMap(ctx, characterCamera) {
+        ctx.drawImage(this.lowerMap,
+            utils.withGrid(4.5) - characterCamera.x,
+            utils.withGrid(2.5) - characterCamera.y)
     }
 
-    drawUpperMap(ctx) {
-        ctx.drawImage(this.upperMap, 0, 0)
+    drawUpperMap(ctx, characterCamera) {
+        ctx.drawImage(this.upperMap,
+            utils.withGrid(4.5) - characterCamera.x,
+            utils.withGrid(2.5) - characterCamera.y)
     }
 }
 

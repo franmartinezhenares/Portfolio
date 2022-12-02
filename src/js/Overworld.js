@@ -11,8 +11,11 @@ class Overworld {
 
             this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
 
+            // Establish character camera 
+            const characterCamera = this.map.gameObjects.player;
+
             // LOWER LAYER
-            this.map.drawLowerMap(this.ctx);
+            this.map.drawLowerMap(this.ctx, characterCamera);
 
             // GAME LAYER
 
@@ -20,12 +23,12 @@ class Overworld {
                 object.update({
                     arrow: this.directionInput.direction
                 });
-                object.sprite.draw(this.ctx);
+                object.sprite.draw(this.ctx, characterCamera);
             })
 
             // UPPER LAYER
 
-            this.map.drawUpperMap(this.ctx);
+            this.map.drawUpperMap(this.ctx, characterCamera);
 
             requestAnimationFrame(() => {
                 step();

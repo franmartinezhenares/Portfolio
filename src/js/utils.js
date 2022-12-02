@@ -1,5 +1,5 @@
 const utils = {
     withGrid(n) {
-        return n*32;
+        return n*120;
     }
 }

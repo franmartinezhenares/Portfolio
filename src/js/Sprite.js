@@ -22,10 +22,8 @@ class Sprite {
             "walk-left": [ [1,2], [0,2], [1,2], [2,2] ],
             "walk-right": [ [1,1], [0,1], [1,1], [2,1] ],
         }
-        this.currentAnimation = "idle-right"; //config.currentAnimation || "idle-down";
-        this.currentAnimationFrame = 0;
 
-        this.animationFrameLimit = config.animationFrameLimit || 34;
+        this.animationFrameLimit = config.animationFrameLimit || 24;
         this.animationFrameProgress = this.animationFrameLimit;
 
         //Reference the game Object
@@ -63,22 +61,23 @@ class Sprite {
 
     }
 
-    draw(ctx) {
+    draw(ctx, characterCamera) {
 
-        const x = this.gameObject.x;
-        let y = this.gameObject.y;
+        const x = this.gameObject.x + utils.withGrid(4.5) - characterCamera.x;
+        let y = this.gameObject.y + utils.withGrid(2.5) - characterCamera.y;
+        let spriteSize = 120;
 
         const [frameX, frameY] = this.frame;
 
         this.isLoaded && ctx.drawImage(this.image,
-            frameX * 120,
-            frameY * 120,
-            120,
-            120,
+            frameX * spriteSize,
+            frameY * spriteSize,
+            spriteSize,
+            spriteSize,
             x,
             y,
-            120,
-            120
+            spriteSize,
+            spriteSize
         );
 
         this.updateAnimationProgress();

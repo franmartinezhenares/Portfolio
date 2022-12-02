@@ -3,7 +3,9 @@ class Character extends GameObject {
     constructor(config) {
         super(config);
         
-        this.movingProgressRemaining = 0;
+        this.movingProgressRemaining = 1;
+
+        this.isPlayerControlled = config.isPlayerControlled || false;
 
         this.directionUpdate = {
             "up": ["y", -1],
@@ -15,8 +17,9 @@ class Character extends GameObject {
 
     update(state) {
         this.updatePosition();
+        this.updateSprite(state);
 
-        if(this.movingProgressRemaining === 0 && state.arrow) {
+        if(this.isPlayerControlled && this.movingProgressRemaining === 0 && state.arrow) {
             this.direction = state.arrow;
             this.movingProgressRemaining = 1;
         }
@@ -27,6 +30,19 @@ class Character extends GameObject {
             const [property, change] = this.directionUpdate[this.direction];
             this[property] += change;
             this.movingProgressRemaining -=1;
+        }
+    }
+
+    updateSprite(state) {
+
+        if(this.isPlayerControlled && this.movingProgressRemaining === 0 && !state.arrow) {
+            this.sprite.setAnimation("idle-" + this.direction);
+            return;
+        }
+
+
+        if(this.isPlayerControlled && state.arrow) {
+            this.sprite.setAnimation("walk-" + this.direction);
         }
     }
 }

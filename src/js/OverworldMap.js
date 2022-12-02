@@ -27,6 +27,7 @@ window.OverworldMaps = {
         upperSrc: background_upper.src,
         gameObjects: {
             player: new Character({
+                isPlayerControlled: true,
                 x: utils.withGrid(5),
                 y: utils.withGrid(1),
             })

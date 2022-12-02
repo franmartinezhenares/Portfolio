@@ -14,12 +14,12 @@ body {
 
 .game_container {
     position: relative;
-    width: 320px;
-    height: 240px;
+    width: 1200px;
+    height: 720px;
     margin: 0 auto;
     margin-top: 100px;
     border: 1px black solid;
 
-    transform: scale(3) translateY(50%);
+    /* transform: scale(3) translateY(50%); */
     image-rendering: pixelated;
 }

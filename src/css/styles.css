@@ -21,5 +21,5 @@ body {
     border: 1px black solid;
 
     /* transform: scale(3) translateY(50%); */
-    image-rendering: pixelated;
+    /* image-rendering: pixelated; */
 }

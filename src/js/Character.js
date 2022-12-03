@@ -3,7 +3,7 @@ class Character extends GameObject {
     constructor(config) {
         super(config);
         
-        this.movingProgressRemaining = 1;
+        this.movingProgressRemaining = 0;
 
         this.isPlayerControlled = config.isPlayerControlled || false;
 
@@ -23,8 +23,11 @@ class Character extends GameObject {
             this.direction = state.arrow;
 
             console.log(state.map.isSpaceTaken(this.x, this.y, this.direction));
+
            
             this.movingProgressRemaining = 120;
+
+            console.log(this.x + "/" + this.y);
         }
     };
 

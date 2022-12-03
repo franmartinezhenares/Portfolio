@@ -49,7 +49,7 @@ class Overworld {
 
         this.directionInput = new DirectionInput();
         this.directionInput.init();
-        // this.directionInput.direction;
+        this.directionInput.direction;
 
         this.startGameLoop();
 

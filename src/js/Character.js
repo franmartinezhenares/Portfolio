@@ -8,10 +8,10 @@ class Character extends GameObject {
         this.isPlayerControlled = config.isPlayerControlled || false;
 
         this.directionUpdate = {
-            "up": ["y", -1],
-            "down": ["y", 1],
-            "left": ["x", -1],
-            "right": ["x", 1],
+            "up": ["y", -2],
+            "down": ["y", 2],
+            "left": ["x", -2],
+            "right": ["x", 2],
         }
     };
 
@@ -25,7 +25,7 @@ class Character extends GameObject {
             console.log(state.map.isSpaceTaken(this.x, this.y, this.direction));
 
            
-            this.movingProgressRemaining = 120;
+            this.movingProgressRemaining = 60;
 
             console.log(this.x + "/" + this.y);
         }

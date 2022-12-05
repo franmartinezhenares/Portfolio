@@ -1,15 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --light-color: rgb(217, 248, 208);
+    --light-medium: rgb(106,194,107);
+    --medium-dark: rgb(0,104,77);
+    --dark: black;
+}
+
 body {
-    background-color: #D9F8D0;
+    background-color: var(--light-color);
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 1.5rem;
+    font-family: 'Roboto Flex', sans-serif;
     /* overflow-y: hidden; */
 }
 
@@ -19,9 +31,9 @@ body {
 
 .game_container {
     position: relative;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 
-    /* transform: scale(0.5) translateY(-50%); */
+    /* transform: scale(0.5); */
 }
 #canvas{
     width: 100%;
@@ -30,7 +42,7 @@ body {
 
 .modal-container {
     display: flex;
-    background-color: rgb(200, 200, 200, 0.4);
+    background-color: rgb(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -48,13 +60,31 @@ body {
 }
 
 .modal {
-    background-color: bisque;
+    color: var(--light-color);
+    background-color: rgb(0,104,77,0.9);
+    font-weight: 100;
+    padding: 2rem;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    
-
+    align-items: center;
 }
 
 .portrait {
     width: 250px;
+    margin: 1rem;
+}
+
+#about_close {
+    position: absolute;
+    background-color: var(--light-color);
+    color: var(--medium-dark); 
+    right: 8%;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2rem;
+    font-weight:900;
 }

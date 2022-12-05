@@ -1,4 +1,4 @@
-const modal_container = document.getElementById("modal_container");
+const modal_container = document.getElementById("modal_container_about");
 const close = document.getElementById("about_close");
 
 

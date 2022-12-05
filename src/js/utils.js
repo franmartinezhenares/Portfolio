@@ -1,4 +1,18 @@
+const modal_container = document.getElementById("modal_container");
+const close = document.getElementById("about_close");
+
+
+close.addEventListener('click', () => {
+    modal_container.classList.remove("show");
+})
+
 const utils = {
+
+    showModal() {
+        modal_container.classList.add("show");
+    },
+
+
     withGrid(n) {
         return n*120;
     },

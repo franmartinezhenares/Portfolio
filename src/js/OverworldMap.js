@@ -117,11 +117,6 @@ window.OverworldMaps = {
         doors: {
 
             [utils.asGridCoord(9,4)] : true,
-            [utils.asGridCoord(11,11)] : [
-                {
-                    events: [{type: "changeMap", map: "Map2"}]
-
-            }]
         }
     },
 

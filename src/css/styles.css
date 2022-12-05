@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    overflow-y: hidden;
+}
 body {
-    background-color: grey;
+    background-color: #D9F8D0;
+    width: 100%;
+    height: 100vh;
 }
 
 .hidden {
@@ -14,12 +18,10 @@ body {
 
 .game_container {
     position: relative;
-    width: 1200px;
-    height: 720px;
-    margin: 0 auto;
     margin-top: 100px;
-    border: 1px black solid;
 
     /* transform: scale(0.5) translateY(-50%); */
-    /* image-rendering: pixelated; */
+}
+#canvas{
+    width: 100%;
 }

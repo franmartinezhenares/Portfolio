@@ -48,9 +48,15 @@ class Overworld {
         this.map.checkForDoor();
     }
 
+    startMap(mapConfig) {
+        this.map = new OverworldMap(mapConfig);
+        this.map.overworld = this;
+    }
+
     init() {
 
-        this.map = new OverworldMap(window.OverworldMaps.DemoMap);
+        // this.map = new OverworldMap(window.OverworldMaps.DemoMap);
+        this.startMap(window.OverworldMaps.DemoMap);
 
         console.log(this.map.walls);
         console.log(this.map.doors);

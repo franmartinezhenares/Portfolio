@@ -41,6 +41,7 @@ class Character extends GameObject {
             }
             if(state.map.checkForDoor(this.x, this.y, this.direction)) {
                 console.log("door");
+                window.location.assign("./aboutMe.html");
             }
             // Ready to move
             this.movingProgressRemaining = 60;

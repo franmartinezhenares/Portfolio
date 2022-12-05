@@ -12,6 +12,11 @@ class OverworldEvent {
 
     }
 
+    changeMap(resolve) {
+        this.map.overworld.startMap(window.OverworldMaps[this.event.map])
+        resolve();
+    }
+
 
     init() {
         return new Promise(resolve => {

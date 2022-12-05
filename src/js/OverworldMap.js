@@ -1,9 +1,15 @@
 class OverworldMap {
     constructor(config) {
+
+
+        this.overworld = null;
+
         this.gameObjects = config.gameObjects;
 
         this.walls = config.walls || {};
         this.doors = config.doors || {};
+
+        this.doors.events = config.doors.events;
 
         this.lowerMap = new Image();
         this.lowerMap.src = config.lowerSrc;
@@ -39,6 +45,8 @@ class OverworldMap {
 
 const background_lower_map = document.getElementById("background_img")
 const background_upper = document.getElementById("spritesheet_img")
+
+const background_lower_map2 = document.getElementById("background_map2");
 
 window.OverworldMaps = {
     DemoMap: {
@@ -109,7 +117,29 @@ window.OverworldMaps = {
         doors: {
 
             [utils.asGridCoord(9,4)] : true,
-            [utils.asGridCoord(11,11)] : true,
+            [utils.asGridCoord(11,11)] : [
+                {
+                    events: [{type: "changeMap", map: "Map2"}]
+
+            }]
+        }
+    },
+
+    Map2: {
+        lowerSrc: background_lower_map2.src,
+        upperSrc: background_upper.src,
+        gameObjects: {
+            player: new Character({
+                isPlayerControlled: true,
+                x: utils.withGrid(1),
+                y: utils.withGrid(1),
+            })
+        },
+        walls: {
+
+        },
+        doors: {
+
         }
     },
 }

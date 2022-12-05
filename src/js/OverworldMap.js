@@ -3,6 +3,7 @@ class OverworldMap {
         this.gameObjects = config.gameObjects;
 
         this.walls = config.walls || {};
+        this.doors = config.doors || {};
 
         this.lowerMap = new Image();
         this.lowerMap.src = config.lowerSrc;
@@ -10,7 +11,7 @@ class OverworldMap {
         this.upperMap = new Image();
         this.upperMap.src = config.upperSrc;
 
-
+        // this.isCutscenePlaying = true;
     }
 
     drawLowerMap(ctx, characterCamera) {
@@ -28,6 +29,11 @@ class OverworldMap {
     isSpaceTaken(currentX, currentY, direction) {
         const {x,y} = utils.nextPosition(currentX, currentY, direction);
         return this.walls[`${x}, ${y}`];
+    }
+
+    checkForDoor(currentX, currentY, direction) {
+        const {x,y} = utils.nextPosition(currentX, currentY, direction);
+        return this.doors[`${x}, ${y}`];
     }
 }
 
@@ -99,7 +105,11 @@ window.OverworldMaps = {
             [utils.asGridCoord(18,9)] : true,
 
             [utils.asGridCoord(11,5)] : true,
+        },
+        doors: {
 
+            [utils.asGridCoord(9,4)] : true,
+            [utils.asGridCoord(11,11)] : true,
         }
     },
 }

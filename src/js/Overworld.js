@@ -26,7 +26,9 @@ class Overworld {
 
             // GAME LAYER
 
-            Object.values(this.map.gameObjects).forEach(object => {
+            Object.values(this.map.gameObjects).sort((a,b) => {
+                return a.y - b.y;
+            }).forEach(object => {
                 object.sprite.draw(this.ctx, characterCamera);
             })
 
@@ -41,15 +43,23 @@ class Overworld {
         step();
     }
 
+    
+    bindPlayerPositionCheck() {
+        this.map.checkForDoor();
+    }
+
     init() {
 
         this.map = new OverworldMap(window.OverworldMaps.DemoMap);
 
         console.log(this.map.walls);
+        console.log(this.map.doors);
 
         this.directionInput = new DirectionInput();
         this.directionInput.init();
         this.directionInput.direction;
+
+        this.bindPlayerPositionCheck();
 
         this.startGameLoop();
 

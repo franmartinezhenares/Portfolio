@@ -20,7 +20,8 @@ class Character extends GameObject {
             this.updatePosition();
         } else {
             // Keyboard controled character with arrow pressed
-            if(this.isPlayerControlled && state.arrow) {
+
+            if(/*!state.map.isCutsecenePlaying && */ this.isPlayerControlled && state.arrow) {
                 this.startBehavior(state, {
                     type: "walk",
                     direction: state.arrow
@@ -37,6 +38,9 @@ class Character extends GameObject {
             // Stop if space is taken
             if(state.map.isSpaceTaken(this.x, this.y, this.direction)) {
                 return;
+            }
+            if(state.map.checkForDoor(this.x, this.y, this.direction)) {
+                console.log("door");
             }
             // Ready to move
             this.movingProgressRemaining = 60;

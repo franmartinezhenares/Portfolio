@@ -8,10 +8,10 @@ class Character extends GameObject {
         this.isPlayerControlled = config.isPlayerControlled || false;
 
         this.directionUpdate = {
-            "up": ["y", -2],
-            "down": ["y", 2],
-            "left": ["x", -2],
-            "right": ["x", 2],
+            "up": ["y", -3],
+            "down": ["y", 3],
+            "left": ["x", -3],
+            "right": ["x", 3],
         }
     };
 
@@ -41,10 +41,10 @@ class Character extends GameObject {
             }
             if(state.map.checkForDoor(this.x, this.y, this.direction)) {
                 console.log("door");
-                window.location.assign("./aboutMe.html");
+                window.location.assign("aboutMe.html");
             }
             // Ready to move
-            this.movingProgressRemaining = 60;
+            this.movingProgressRemaining = 40;
         }
     }
 

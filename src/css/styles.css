@@ -20,6 +20,6 @@ body {
     margin-top: 100px;
     border: 1px black solid;
 
-    /* transform: scale(3) translateY(50%); */
+    /* transform: scale(0.5) translateY(-50%); */
     /* image-rendering: pixelated; */
 }

@@ -16,39 +16,45 @@ class Character extends GameObject {
     };
 
     update(state) {
-        this.updatePosition();
-        this.updateSprite(state);
-
-        if(this.isPlayerControlled && this.movingProgressRemaining === 0 && state.arrow) {
-            this.direction = state.arrow;
-
-            console.log(state.map.isSpaceTaken(this.x, this.y, this.direction));
-
-           
-            this.movingProgressRemaining = 60;
-
-            console.log(this.x + "/" + this.y);
+        if(this.movingProgressRemaining > 0) {
+            this.updatePosition();
+        } else {
+            // Keyboard controled character with arrow pressed
+            if(this.isPlayerControlled && state.arrow) {
+                this.startBehavior(state, {
+                    type: "walk",
+                    direction: state.arrow
+                })
+            }
+            this.updateSprite(state);
         }
     };
 
-    updatePosition() {
-        if(this.movingProgressRemaining > 0) {
-            const [property, change] = this.directionUpdate[this.direction];
-            this[property] += change;
-            this.movingProgressRemaining -=1;
+    startBehavior(state, behavior) {
+        // Set character behavior 
+        this.direction = behavior.direction;
+        if(behavior.type === "walk") {
+            // Stop if space is taken
+            if(state.map.isSpaceTaken(this.x, this.y, this.direction)) {
+                return;
+            }
+            // Ready to move
+            this.movingProgressRemaining = 60;
         }
     }
 
-    updateSprite(state) {
+    updatePosition() {
+        const [property, change] = this.directionUpdate[this.direction];
+        this[property] += change;
+        this.movingProgressRemaining -=1;
+    }
 
-        if(this.isPlayerControlled && this.movingProgressRemaining === 0 && !state.arrow) {
-            this.sprite.setAnimation("idle-" + this.direction);
+    updateSprite() {
+
+        if(this.movingProgressRemaining > 0) {
+            this.sprite.setAnimation("walk-" + this.direction);
             return;
         }
-
-
-        if(this.isPlayerControlled && state.arrow) {
-            this.sprite.setAnimation("walk-" + this.direction);
-        }
+        this.sprite.setAnimation("idle-" + this.direction);
     }
 }

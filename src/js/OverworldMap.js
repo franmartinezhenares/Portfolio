@@ -9,7 +9,7 @@ class OverworldMap {
         this.walls = config.walls || {};
         this.doors = config.doors || {};
 
-        this.doors.events = config.doors.events;
+        // this.doors.events = config.doors.events;
 
         this.lowerMap = new Image();
         this.lowerMap.src = config.lowerSrc;
@@ -116,7 +116,9 @@ window.OverworldMaps = {
         },
         doors: {
 
-            [utils.asGridCoord(9,4)] : true,
+            [utils.asGridCoord(9,4)] : "about",
+
+            [utils.asGridCoord(3,9)] : "cv",
         }
     },
 

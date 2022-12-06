@@ -39,15 +39,13 @@ class Character extends GameObject {
             if(state.map.isSpaceTaken(this.x, this.y, this.direction)) {
                 return;
             }
-            if(state.map.checkForDoor(this.x, this.y, this.direction)) {
-                // console.log("door");
-                // window.location.assign("aboutMe.html");
+
+            let door = state.map.checkForDoor(this.x, this.y, this.direction);
+
                 setTimeout(() => {
-                    utils.showModal();
+                    utils.showModal(door);
                 }, 500);
 
-            }
-            // Ready to move
             this.movingProgressRemaining = 40;
         }
     }

@@ -1,5 +1,6 @@
-const modal_container = document.getElementById("modal_container_about");
+
 const close = document.getElementById("about_close");
+const modal_container = document.getElementById("modal_container_about");
 
 
 close.addEventListener('click', () => {
@@ -8,8 +9,21 @@ close.addEventListener('click', () => {
 
 const utils = {
 
-    showModal() {
-        modal_container.classList.add("show");
+    showModal(modal) {
+        console.log(modal);
+        if(modal != undefined) {
+            if(modal === "about") {
+                console.log("dentro de about")
+                const modal_container = document.getElementById("modal_container_about");
+                modal_container.classList.add("show");
+            } else if ( modal === "cv") {
+                console.log("dentro de CV")
+                const modal_container = document.getElementById("modal_container_cv");
+                modal_container.classList.add("show");
+            }
+            // modal_container.classList.add("show");
+        }
+
     },
 
 

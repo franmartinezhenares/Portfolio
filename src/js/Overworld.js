@@ -58,7 +58,6 @@ class Overworld {
         // this.map = new OverworldMap(window.OverworldMaps.DemoMap);
         this.startMap(window.OverworldMaps.DemoMap);
 
-        console.log(this.map.walls);
         console.log(this.map.doors);
 
         this.directionInput = new DirectionInput();

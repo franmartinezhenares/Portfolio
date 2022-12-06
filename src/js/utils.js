@@ -3,9 +3,9 @@ const close = document.getElementById("about_close");
 const modal_container = document.getElementById("modal_container_about");
 
 
-close.addEventListener('click', () => {
-    modal_container.classList.remove("show");
-})
+// close.addEventListener('click', () => {
+//     modal_container.classList.remove("show");
+// })
 
 const utils = {
 
@@ -16,10 +16,18 @@ const utils = {
                 console.log("dentro de about")
                 const modal_container = document.getElementById("modal_container_about");
                 modal_container.classList.add("show");
+                const close = document.getElementById("about_close");
+                close.addEventListener('click', () => {
+                    modal_container.classList.remove("show");
+                })
             } else if ( modal === "cv") {
                 console.log("dentro de CV")
                 const modal_container = document.getElementById("modal_container_cv");
                 modal_container.classList.add("show");
+                const close = document.getElementById("cv_close");
+                close.addEventListener('click', () => {
+                    modal_container.classList.remove("show");
+                })
             }
             // modal_container.classList.add("show");
         }

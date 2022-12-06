@@ -70,12 +70,24 @@ body {
     align-items: center;
 }
 
+.cv {
+
+    font-size: 1rem;
+    align-items: left;
+}
+
+.cv_section {
+    width: 80%;
+    padding: 1rem;
+    border: solid 1px var(--light-color);
+}
+
 .portrait {
     width: 250px;
     margin: 1rem;
 }
 
-#about_close {
+.close_button {
     position: absolute;
     background-color: var(--light-color);
     color: var(--medium-dark); 

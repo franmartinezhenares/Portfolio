@@ -110,6 +110,7 @@ body {
 }
 
 .close_button {
+    cursor: pointer;
     position: absolute;
     background-color: var(--light-color);
     color: var(--medium-dark); 
@@ -126,4 +127,50 @@ body {
 .form {
     display: flex;
     flex-direction: column;
+}
+
+.form_info {
+    display: flex;
+}
+
+.form_section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.5rem;
+}
+
+#coment {
+    font-size: 1rem;
+}
+
+.submit_button {
+    cursor: pointer;
+    background-color: var(--medium-dark);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 2rem;
+    font-weight:900;
+}
+
+.submit_button:hover {
+    background-color: var(--light-color);
+    color: var(--medium-dark);
+    border: 1px solid var(--light-medium);
+
+
+
 }

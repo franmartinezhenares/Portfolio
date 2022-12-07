@@ -1,12 +1,4 @@
 
-const close = document.getElementById("about_close");
-const modal_container = document.getElementById("modal_container_about");
-
-
-// close.addEventListener('click', () => {
-//     modal_container.classList.remove("show");
-// })
-
 const utils = {
 
     showModal(modal) {
@@ -44,6 +36,13 @@ const utils = {
 
         }
 
+    },
+
+    printInstructions(action) {
+        console.log(action);
+        const message = document.getElementById("message_direction");
+        // message.classList.add("show");
+        message.classList.remove("show");
     },
 
 

@@ -41,10 +41,16 @@ class Character extends GameObject {
             }
 
             let door = state.map.checkForDoor(this.x, this.y, this.direction);
-
+            if(door != undefined) {
                 setTimeout(() => {
                     utils.showModal(door);
                 }, 500);
+            }
+
+            let action = state.map.checkForAction(this.x, this.y, this.direction);
+            if(action != undefined) {
+                utils.printInstructions(action);
+            }
 
             this.movingProgressRemaining = 40;
         }

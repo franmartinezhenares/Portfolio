@@ -9,6 +9,8 @@ class OverworldMap {
         this.walls = config.walls || {};
         this.doors = config.doors || {};
 
+        this.actions = config.actions || {};
+
         // this.doors.events = config.doors.events;
 
         this.lowerMap = new Image();
@@ -40,6 +42,11 @@ class OverworldMap {
     checkForDoor(currentX, currentY, direction) {
         const {x,y} = utils.nextPosition(currentX, currentY, direction);
         return this.doors[`${x}, ${y}`];
+    }
+
+    checkForAction(currentX, currentY, direction) {
+        const {x,y} = utils.nextPosition(currentX, currentY, direction);
+        return this.actions[`${x}, ${y}`];
     }
 }
 
@@ -216,24 +223,12 @@ window.OverworldMaps = {
             [utils.asGridCoord(3,9)] : "cv",
 
             [utils.asGridCoord(17,9)] : "projects",
-        }
-    },
-
-    Map2: {
-        lowerSrc: background_lower_map2.src,
-        upperSrc: background_upper.src,
-        gameObjects: {
-            player: new Character({
-                isPlayerControlled: true,
-                x: utils.withGrid(1),
-                y: utils.withGrid(1),
-            })
         },
-        walls: {
-
-        },
-        doors: {
-
+        actions: {
+            [utils.asGridCoord(12,10)] : "close",
+            [utils.asGridCoord(10,10)] : "close",
+            [utils.asGridCoord(11,9)] : "close",
+            [utils.asGridCoord(11,12)] : "close",
         }
     },
 }

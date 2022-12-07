@@ -57,9 +57,23 @@ body {
 
     /* transform: scale(0.5); */
 }
+
 #canvas{
     width: 100%;
     height: 100%;
+}
+
+.text_box {
+    background-color: var(--medium-dark);
+    color: var(--light-color);
+    position: absolute;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+    top: 1rem;
+    left: 2rem;
+    opacity: 0;
+
 }
 
 .modal-container {
@@ -99,9 +113,14 @@ body {
 }
 
 .cv_section {
-    width: 80%;
+    width: 100%;
     padding: 1rem;
     border: solid 1px var(--light-color);
+}
+
+.cv_section_1 {
+    width: 100%;
+    display: flex;
 }
 
 .portrait {

@@ -39,10 +39,16 @@ const utils = {
     },
 
     closeInstructions(action) {
-        console.log(action);
         const message = document.getElementById("message_direction");
-        // message.classList.add("show");
         message.classList.remove("show");
+    },
+
+    openInstructions(action) {
+        if(action === "contact") {
+            const message = document.getElementById("message_contact");
+            message.classList.add("show");
+        }
+
     },
 
 

@@ -49,7 +49,7 @@ class Character extends GameObject {
 
             let action = state.map.checkForAction(this.x, this.y, this.direction);
             if(action != undefined) {
-                utils.printInstructions(action);
+                utils.closeInstructions(action);
             }
 
             this.movingProgressRemaining = 40;

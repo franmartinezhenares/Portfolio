@@ -38,7 +38,7 @@ const utils = {
 
     },
 
-    printInstructions(action) {
+    closeInstructions(action) {
         console.log(action);
         const message = document.getElementById("message_direction");
         // message.classList.add("show");

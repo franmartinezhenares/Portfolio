@@ -39,16 +39,24 @@ const utils = {
     },
 
     closeInstructions(action) {
-        const message = document.getElementById("message_direction");
-        message.classList.remove("show");
+        if(action === "close_directions") {
+            const message = document.getElementById("message_direction");
+            message.classList.remove("show");
+        } else if (action === "close_contact") {
+            const message = document.getElementById("message_contact");
+            message.classList.remove("show");
+        }
+
     },
 
     openInstructions(action) {
         if(action === "contact") {
             const message = document.getElementById("message_contact");
             message.classList.add("show");
+            message.addEventListener('click', () => {
+                this.showModal("contact");
+            })
         }
-
     },
 
 

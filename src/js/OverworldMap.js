@@ -50,10 +50,9 @@ class OverworldMap {
     }
 }
 
-const background_lower_map = document.getElementById("background_img")
-const background_upper = document.getElementById("spritesheet_img")
+const background_lower_map = document.getElementById("background_bottom")
+const background_upper = document.getElementById("background_top")
 
-const background_lower_map2 = document.getElementById("background_map2");
 
 window.OverworldMaps = {
     DemoMap: {
@@ -225,12 +224,15 @@ window.OverworldMaps = {
             [utils.asGridCoord(17,9)] : "projects",
         },
         actions: {
-            [utils.asGridCoord(12,10)] : "close",
-            [utils.asGridCoord(10,10)] : "close",
-            [utils.asGridCoord(11,9)] : "close",
-            [utils.asGridCoord(11,12)] : "close",
+            [utils.asGridCoord(12,10)] : "close_directions",
+            [utils.asGridCoord(10,10)] : "close_directions",
+            [utils.asGridCoord(11,9)] : "close_directions",
+            [utils.asGridCoord(11,12)] : "close_directions",
 
             [utils.asGridCoord(11,6)] : "contact",
+            [utils.asGridCoord(10,6)] : "close_contact",
+            [utils.asGridCoord(12,6)] : "close_contact",
+            [utils.asGridCoord(11,7)] : "close_contact",
         }
     },
 }

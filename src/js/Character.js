@@ -49,10 +49,12 @@ class Character extends GameObject {
 
             let action = state.map.checkForAction(this.x, this.y, this.direction);
             if(action != undefined) {
-                if(action === "close") {
+                if(action === "close_directions") {
                     utils.closeInstructions(action);
                 } else if (action === "contact") {
-                    utils.openInstructions("contact");
+                    utils.openInstructions(action);
+                } else if (action === "close_contact") {
+                    utils.closeInstructions(action);
                 }
             }
 

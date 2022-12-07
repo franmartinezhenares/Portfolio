@@ -13,7 +13,6 @@ const utils = {
         console.log(modal);
         if(modal != undefined) {
             if(modal === "about") {
-                console.log("dentro de about")
                 const modal_container = document.getElementById("modal_container_about");
                 modal_container.classList.add("show");
                 const close = document.getElementById("about_close");
@@ -21,15 +20,28 @@ const utils = {
                     modal_container.classList.remove("show");
                 })
             } else if ( modal === "cv") {
-                console.log("dentro de CV")
                 const modal_container = document.getElementById("modal_container_cv");
                 modal_container.classList.add("show");
                 const close = document.getElementById("cv_close");
                 close.addEventListener('click', () => {
                     modal_container.classList.remove("show");
                 })
+            } else if ( modal === "projects") {
+                const modal_container = document.getElementById("modal_container_projects");
+                modal_container.classList.add("show");
+                const close = document.getElementById("projects_close");
+                close.addEventListener('click', () => {
+                    modal_container.classList.remove("show");
+                })
+            } else if ( modal === "contact") {
+                const modal_container = document.getElementById("modal_container_contact");
+                modal_container.classList.add("show");
+                const close = document.getElementById("contact_close");
+                close.addEventListener('click', () => {
+                    modal_container.classList.remove("show");
+                })
             }
-            // modal_container.classList.add("show");
+
         }
 
     },

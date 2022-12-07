@@ -29,6 +29,28 @@ body {
     display: none;
 }
 
+.main_nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_button {
+    background-color: var(--medium-dark);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    cursor: pointer;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 25%;
+}
+
+.nav_button:hover {
+    text-decoration: underline;
+    transform: translateY(-0.5rem);
+    background-color: var(--light-medium);
+}
+
 .game_container {
     position: relative;
     /* margin-top: 100px; */
@@ -99,4 +121,9 @@ body {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 2rem;
     font-weight:900;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }

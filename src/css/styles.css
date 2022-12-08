@@ -153,9 +153,27 @@ body {
     font-weight:900;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--light-medium2);
+}
+
+a:hover {
+    color: var(--light-color2);
+}
+
 .media_icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0.5rem 0 2rem;
 }
 
 .form {

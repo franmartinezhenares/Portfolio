@@ -173,7 +173,7 @@ a:hover {
 .media_icon {
     width: 3rem;
     height: 3rem;
-    margin: 1rem 0.5rem 0 2rem;
+    margin: 0 0.5rem 0 2rem;
 }
 
 .form {
@@ -208,11 +208,11 @@ a:hover {
 }
 
 .submit_button {
+    margin: 1rem;
     cursor: pointer;
     background-color: var(--medium-dark);
     color: var(--light-color);
     border: 1px solid var(--light-color);
-
     font-family: 'Roboto Flex', sans-serif;
     font-size: 2rem;
     font-weight:900;

@@ -153,6 +153,11 @@ body {
     font-weight:900;
 }
 
+.media_icon {
+    width: 2rem;
+    height: 2rem;
+}
+
 .form {
     display: flex;
     flex-direction: column;

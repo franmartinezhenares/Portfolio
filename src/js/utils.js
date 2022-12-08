@@ -41,10 +41,10 @@ const utils = {
     closeInstructions(action) {
         if(action === "close_directions") {
             const message = document.getElementById("message_direction");
-            message.classList.remove("show");
+            message.classList.remove("show_textbox");
         } else if (action === "close_contact") {
             const message = document.getElementById("message_contact");
-            message.classList.remove("show");
+            message.classList.remove("show_textbox");
         }
 
     },
@@ -52,7 +52,7 @@ const utils = {
     openInstructions(action) {
         if(action === "contact") {
             const message = document.getElementById("message_contact");
-            message.classList.add("show");
+            message.classList.add("show_textbox");
             message.addEventListener('click', () => {
                 this.showModal("contact");
             })

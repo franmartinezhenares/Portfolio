@@ -45,6 +45,15 @@ const utils = {
         } else if (action === "close_contact") {
             const message = document.getElementById("message_contact");
             message.classList.remove("show_textbox");
+        } else if (action === "close_about") {
+            const message = document.getElementById("modal_container_about");
+            message.classList.remove("show");
+        } else if (action === "close_cv") {
+            const message = document.getElementById("modal_container_cv");
+            message.classList.remove("show");
+        } else if (action === "close_projects") {
+            const message = document.getElementById("modal_container_projects");
+            message.classList.remove("show");
         }
 
     },

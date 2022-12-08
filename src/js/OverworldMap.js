@@ -233,6 +233,10 @@ window.OverworldMaps = {
             [utils.asGridCoord(10,6)] : "close_contact",
             [utils.asGridCoord(12,6)] : "close_contact",
             [utils.asGridCoord(11,7)] : "close_contact",
+
+            [utils.asGridCoord(9,5)] : "close_about",
+            [utils.asGridCoord(3,10)] : "close_cv",
+            [utils.asGridCoord(17,10)] : "close_projects",
         }
     },
 }

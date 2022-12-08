@@ -55,6 +55,12 @@ class Character extends GameObject {
                     utils.openInstructions(action);
                 } else if (action === "close_contact") {
                     utils.closeInstructions(action);
+                } else if (action === "close_about") {
+                    utils.closeInstructions(action);
+                } else if (action === "close_cv") {
+                    utils.closeInstructions(action);
+                } else if (action === "close_projects") {
+                    utils.closeInstructions(action);
                 }
             }
 

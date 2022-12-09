@@ -2,7 +2,6 @@
 const utils = {
 
     showModal(modal) {
-        // console.log(modal);
         if(modal != undefined) {
             if(modal === "about") {
                 const modal_container = document.getElementById("modal_container_about");

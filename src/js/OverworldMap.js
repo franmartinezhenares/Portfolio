@@ -7,7 +7,6 @@ class OverworldMap {
 
         this.walls = config.walls || {};
         this.doors = config.doors || {};
-
         this.actions = config.actions || {};
 
         this.lowerMap = new Image();

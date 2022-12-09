@@ -23,7 +23,7 @@ class Character extends GameObject {
         } else {
             // Keyboard controled character with arrow pressed
 
-            if(/*!state.map.isCutsecenePlaying && */ this.isPlayerControlled && state.arrow) {
+            if(this.isPlayerControlled && state.arrow) {
                 this.startBehavior(state, {
                     type: "walk",
                     direction: state.arrow

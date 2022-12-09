@@ -31,7 +31,10 @@ const utils = {
                 const close = document.getElementById("contact_close");
                 close.addEventListener('click', () => {
                     modal_container.classList.remove("show");
+                    OverworldMaps.DemoMap.gameObjects.player.blockedMovement = false;
+                    OverworldMaps.DemoMap.gameObjects.player.movingProgressRemaining = 0;
                 })
+                OverworldMaps.DemoMap.gameObjects.player.blockedMovement = true;
             }
 
         }
@@ -65,6 +68,7 @@ const utils = {
             message.addEventListener('click', () => {
                 this.showModal("contact");
             })
+            
         }
     },
 

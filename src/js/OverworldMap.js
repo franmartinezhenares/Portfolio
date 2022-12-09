@@ -1,7 +1,6 @@
 class OverworldMap {
     constructor(config) {
 
-
         this.overworld = null;
 
         this.gameObjects = config.gameObjects;
@@ -11,15 +10,12 @@ class OverworldMap {
 
         this.actions = config.actions || {};
 
-        // this.doors.events = config.doors.events;
-
         this.lowerMap = new Image();
         this.lowerMap.src = config.lowerSrc;
 
         this.upperMap = new Image();
         this.upperMap.src = config.upperSrc;
 
-        // this.isCutscenePlaying = true;
     }
 
     drawLowerMap(ctx, characterCamera) {

@@ -5,6 +5,8 @@ class Character extends GameObject {
         
         this.movingProgressRemaining = 0;
 
+        this.blockedMovement = false;
+
         this.isPlayerControlled = config.isPlayerControlled || false;
 
         this.directionUpdate = {
@@ -16,7 +18,7 @@ class Character extends GameObject {
     };
 
     update(state) {
-        if(this.movingProgressRemaining > 0) {
+        if(this.movingProgressRemaining > 0 && !this.blockedMovement) {
             this.updatePosition();
         } else {
             // Keyboard controled character with arrow pressed
@@ -76,10 +78,13 @@ class Character extends GameObject {
 
     updateSprite() {
 
-        if(this.movingProgressRemaining > 0) {
+        if(this.movingProgressRemaining > 0 && !this.blockedMovement) {
             this.sprite.setAnimation("walk-" + this.direction);
             return;
         }
-        this.sprite.setAnimation("idle-" + this.direction);
+        if(!this.blockedMovement) {
+            this.sprite.setAnimation("idle-" + this.direction);
+        }
+
     }
 }

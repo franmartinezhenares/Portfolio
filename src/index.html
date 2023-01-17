@@ -27,7 +27,7 @@
 </head>
 <body>
     <nav class="main_nav">
-        <button class="nav_button" onclick='utils.showModal("about")'>About</button>
+        <button class="nav_button" onclick='utils.showContentModal("about")'>About</button>
         <button class="nav_button" onclick='utils.showModal("cv")'>CV</button>
         <button class="nav_button" onclick='utils.showModal("projects")'>Projects</button>
         <button class="nav_button" onclick='utils.showModal("contact")'>Contact</button>
@@ -45,37 +45,10 @@
         </div>
     </div>
 
-    <div class="modal-container" id="modal_container_about">
+    <div class="modal-container" id="modal_container">
         <div class="modal">
-            <h1>About Me</h1>
-            <p>
-                Soy Francisco José Martínez Henares y actualmente estoy cursando un FP de Grado Superior de Desarrollo de Aplicaciones Web (DAW). Siempre me ha atraído el diseño y me gustan los desafíos técnicos así que me he decidido a formarme en esta rama, donde creo que puedo hacer un buen trabajo.
-            </p>
-            <p>
-                Durante mi vida laboral hasta la fecha (básicamente servicios o comercial en tienda) he trabajado en diferentes ambientes con grupos grandes y pequeños. También he sido responsable en un comercio liderando un pequeño grupo. Considero que el trato personal siempre ha sido uno de mis fuertes.
-            </p>
-            <p>
-                Tengo muchas ganas de adentrarme en este sector y encontrar un equipo de trabajo donde pueda evolucionar como desarrollador. De momento lo que más me atrae es el frontend, pero como desarrollador junior no me importa formarme en cualquier lenguaje, framework, SO, etc.
-            </p>
-            <img class="portrait" src="assets/images/Perfil.jpg" alt="Foto de perfil">
-
-            <div class="links">
-                <a href="http://www.facebook.com" target="_blank">
-                    <img src="./assets/images/fb_icon-icons.com_65434.png" alt="github" class="media_icon">
-                    Facebook
-                  </a>
-
-                  <a href="http://www.github.com/franmartinezhenares" target="_blank">
-                    <img src="./assets/images/github_logo_icon_143772.png" alt="github" class="media_icon">
-                    Github
-                  </a>
-
-                  <a href="http://www.linkedin.com/in/fjmh1981" target="_blank">
-                    <img src="./assets/images/sociallinkedin_member_70.png" alt="github" class="media_icon">
-                    linkedin
-                  </a>
-            </div>
-            <button class="close_button" id="about_close">X</button>
+            <div id="js_content"></div>
+            <button class="close_button" id="modal_close">X</button>
         </div>
     </div>
 

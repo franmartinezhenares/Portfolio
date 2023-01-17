@@ -23,6 +23,7 @@ const utils = {
                 const close = document.getElementById("projects_close");
                 close.addEventListener('click', () => {
                     modal_container.classList.remove("show");
+                    console.log('he cerrado projects');
                 })
             } else if ( modal === "contact") {
                 const modal_container = document.getElementById("modal_container_contact");
@@ -38,6 +39,15 @@ const utils = {
 
         }
 
+    },
+
+    showContentModal(file) {
+
+        let contentDiv = document.getElementById("js_content");
+        fetch(file +".html").then(result => result.text()).then(text => contentDiv.innerHTML = text);
+        let modal_container = document.getElementById("modal_container");
+        modal_container.classList.add("show");
+        return false;
     },
 
     closeInstructions(action) {
@@ -93,5 +103,12 @@ const utils = {
         }
 
         return {x,y};
+    },
+    //Función que sirve para bindear eventos y demás instrucciones tras la primera carga de la página.
+    init() {
+            document.getElementById("modal_close").addEventListener('click', () => {
+            document.getElementById("modal_container").classList.remove("show");
+            document.getElementById("js_content").innerHTML = null;
+        });
     } 
 }

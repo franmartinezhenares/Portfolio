@@ -42,7 +42,6 @@ const utils = {
     },
 
     showContentModal(file) {
-
         let contentDiv = document.getElementById("js_content");
         fetch(file +".html").then(result => result.text()).then(text => contentDiv.innerHTML = text);
         let modal_container = document.getElementById("modal_container");

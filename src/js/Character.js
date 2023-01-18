@@ -45,7 +45,7 @@ class Character extends GameObject {
             let door = state.map.checkForDoor(this.x, this.y, this.direction);
             if(door != undefined) {
                 setTimeout(() => {
-                    utils.showModal(door);
+                    utils.showContentModal(door);
                 }, 500);
             }
 

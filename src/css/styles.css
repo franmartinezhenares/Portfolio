@@ -263,4 +263,7 @@ a:hover {
 
         width: 100%;
     }
+    /* .game_container {
+        padding-top: calc(4*64px);
+    } */
 }

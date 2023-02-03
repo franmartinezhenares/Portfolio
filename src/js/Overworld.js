@@ -1,3 +1,6 @@
+import OverworldMap from "./OverworldMap";
+import DirectionInput from "./DirectionInput";
+
 export default class Overworld {
     constructor(config) {
         this.element = config.element;

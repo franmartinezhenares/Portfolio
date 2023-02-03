@@ -47,9 +47,11 @@ export default utils = {
     withGrid(n) {
         return n*120;
     },
+
     asGridCoord(x, y) {
         return `${x*120}, ${y*120}`;
     },
+    
     nextPosition(initialX, initialY, direction) {
         let x = initialX;
         let y = initialY;

@@ -1,3 +1,5 @@
+import Sprite from "./Sprite";
+
 const player_image = document.getElementById("player_img"); 
 
 export default class GameObject {

@@ -1,3 +1,6 @@
+import utils from "./utils.js";
+import Character from "./Character.js";
+
 export default class OverworldMap {
     constructor(config) {
 

@@ -1,5 +1,4 @@
-
-const utils = {
+export default utils = {
 
     showContentModal(file) {
         let contentDiv = document.getElementById("js_content");

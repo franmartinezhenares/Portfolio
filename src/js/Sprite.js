@@ -1,4 +1,4 @@
-class Sprite {
+export default class Sprite {
     constructor(config) {
 
         // Setup image

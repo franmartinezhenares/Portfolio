@@ -27,10 +27,10 @@
 </head>
 <body>
     <nav class="main_nav">
-        <button class="nav_button" onclick='utils.showContentModal("about")'>About</button>
-        <button class="nav_button" onclick='utils.showContentModal("cv")'>CV</button>
-        <button class="nav_button" onclick='utils.showContentModal("projects")'>Projects</button>
-        <button class="nav_button" onclick='utils.showContentModal("contact")'>Contact</button>
+        <button id="about" class="nav_button">About</button>
+        <button id="cv" class="nav_button">CV</button>
+        <button id="projects" class="nav_button">Projects</button>
+        <button id="contact" class="nav_button">Contact</button>
     </nav>
 
     <div class="game_container">
@@ -64,6 +64,8 @@
     <script src="./js/Sprite.js"></script>
     <script src="./js/Character.js"></script>
     <script src="./js/OverworldMap.js"></script>
-    <script src="./js/init.js"></script>
+    <script src="./js/utils.js"></script>
+    
+    <script type="module" src="./js/init.js"></script>
 </body>
 </html>

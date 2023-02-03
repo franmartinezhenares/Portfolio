@@ -1,6 +1,6 @@
 const player_image = document.getElementById("player_img"); 
 
-class GameObject {
+export default class GameObject {
 
     constructor(config) {
         this.x = config.x || 0;

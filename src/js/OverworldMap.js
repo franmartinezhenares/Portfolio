@@ -1,4 +1,4 @@
-class OverworldMap {
+export default class OverworldMap {
     constructor(config) {
 
         this.overworld = null;

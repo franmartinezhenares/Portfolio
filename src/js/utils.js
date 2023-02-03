@@ -1,46 +1,6 @@
 
 const utils = {
 
-    // showModal(modal) {
-    //     if(modal != undefined) {
-    //         if(modal === "about") {
-    //             const modal_container = document.getElementById("modal_container_about");
-    //             modal_container.classList.add("show");
-    //             const close = document.getElementById("about_close");
-    //             close.addEventListener('click', () => {
-    //                 modal_container.classList.remove("show");
-    //             })
-    //         } else if ( modal === "cv") {
-    //             const modal_container = document.getElementById("modal_container_cv");
-    //             modal_container.classList.add("show");
-    //             const close = document.getElementById("cv_close");
-    //             close.addEventListener('click', () => {
-    //                 modal_container.classList.remove("show");
-    //             })
-    //         } else if ( modal === "projects") {
-    //             const modal_container = document.getElementById("modal_container_projects");
-    //             modal_container.classList.add("show");
-    //             const close = document.getElementById("projects_close");
-    //             close.addEventListener('click', () => {
-    //                 modal_container.classList.remove("show");
-    //                 console.log('he cerrado projects');
-    //             })
-    //         } else if ( modal === "contact") {
-    //             const modal_container = document.getElementById("modal_container_contact");
-    //             modal_container.classList.add("show");
-    //             const close = document.getElementById("contact_close");
-    //             close.addEventListener('click', () => {
-    //                 modal_container.classList.remove("show");
-    //                 OverworldMaps.DemoMap.gameObjects.player.blockedMovement = false;
-    //                 OverworldMaps.DemoMap.gameObjects.player.movingProgressRemaining = 0;
-    //             })
-    //             OverworldMaps.DemoMap.gameObjects.player.blockedMovement = true;
-    //         }
-
-    //     }
-
-    // },
-
     showContentModal(file) {
         let contentDiv = document.getElementById("js_content");
         fetch(file +".html").then(result => result.text()).then(text => contentDiv.innerHTML = text);
@@ -64,23 +24,7 @@ const utils = {
         document.getElementById("modal_container").classList.remove("show");
         document.getElementById("js_content").innerHTML = null;
 
-
-        // } else if (action === "close_about") {
-        //     const message = document.getElementById("modal_close");
-        //     message.classList.remove("show");
-
-
-        // } else if (action === "close_cv") {
-        //     const message = document.getElementById("modal_container_cv");
-        //     message.classList.remove("show");
-        // } else if (action === "close_projects") {
-        //     const message = document.getElementById("modal_container_projects");
-        //     message.classList.remove("show");
-        // }
-
     },
-
-    //! TABINDEX, FOCUS
 
     openInstructions(action) {
         if(action === "contact") {
@@ -123,7 +67,7 @@ const utils = {
 
         return {x,y};
     },
-    //Función que sirve para bindear eventos y demás instrucciones tras la primera carga de la página.
+
     init() {
             document.getElementById("modal_close").addEventListener('click', () => {
             document.getElementById("modal_container").classList.remove("show");

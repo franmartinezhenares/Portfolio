@@ -54,3 +54,7 @@ Una vez arreglada la navegación por teclado la página se puede navegar sin pro
 ### **Responsive**
 
 Para la fecha de entrega del proyecto del Portfolio no tuve tiempo de pulir que todos los elementos se mostrasen correctamente en todos los dispositivos. He añadido media-querys para que las imágenes y textos se muestren siempre de un tamaño adecuado a la resolución.
+
+# **Performance**
+
+* [Informe inicial](/Lighthouse/Performance_inicial.html)

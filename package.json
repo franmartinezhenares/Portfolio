@@ -2,9 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/*.html",
+    "start": "npx parcel src/*.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,3 +1,5 @@
+import utils from "./utils.js";
+
 export default class Sprite {
     constructor(config) {
 

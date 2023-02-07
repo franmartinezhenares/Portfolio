@@ -1,4 +1,4 @@
-import Sprite from "./Sprite";
+import Sprite from "./Sprite.js";
 
 const player_image = document.getElementById("player_img"); 
 

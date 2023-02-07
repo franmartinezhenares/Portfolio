@@ -1,8 +1,10 @@
-export default utils = {
+let utils = {
 
     showContentModal(file) {
+
         let contentDiv = document.getElementById("js_content");
         fetch(file +".html").then(result => result.text()).then(text => contentDiv.innerHTML = text);
+
         let modal_container = document.getElementById("modal_container");
         modal_container.classList.add("show");
         return false;
@@ -51,7 +53,7 @@ export default utils = {
     asGridCoord(x, y) {
         return `${x*120}, ${y*120}`;
     },
-    
+
     nextPosition(initialX, initialY, direction) {
         let x = initialX;
         let y = initialY;
@@ -76,3 +78,5 @@ export default utils = {
         });
     } 
 }
+
+export default utils;

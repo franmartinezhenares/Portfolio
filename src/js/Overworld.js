@@ -1,5 +1,5 @@
-import OverworldMap from "./OverworldMap";
-import DirectionInput from "./DirectionInput";
+import OverworldMap from "./OverworldMap.js";
+import DirectionInput from "./DirectionInput.js";
 
 export default class Overworld {
     constructor(config) {
@@ -58,10 +58,7 @@ export default class Overworld {
 
     init() {
 
-        // this.map = new OverworldMap(window.OverworldMaps.DemoMap);
         this.startMap(window.OverworldMaps.DemoMap);
-
-        // console.log(this.map.doors);
 
         this.directionInput = new DirectionInput();
         this.directionInput.init();

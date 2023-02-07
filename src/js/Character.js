@@ -1,4 +1,6 @@
-import GameObject from "./GameObject";
+import utils from "./utils.js";
+
+import GameObject from "./GameObject.js";
 
 export default class Character extends GameObject {
     constructor(config) {

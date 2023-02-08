@@ -8,7 +8,7 @@ export default class GameObject {
         this.direction = config.direction || "down";
         this.sprite = new Sprite({
             gameObject: this,
-            src: "./assets/images/round_spritesheet.webp" || "./assets/images/round_spritesheet.webp",
+            src: document.getElementById("character").src,
         });
         this.movingProgressRemaining = 0;
     }

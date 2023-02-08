@@ -1,7 +1,5 @@
 import Sprite from "./Sprite.js";
 
-const player_image = document.getElementById("player_img"); 
-
 export default class GameObject {
 
     constructor(config) {
@@ -10,7 +8,7 @@ export default class GameObject {
         this.direction = config.direction || "down";
         this.sprite = new Sprite({
             gameObject: this,
-            src: config.src || player_image.src,
+            src: "/src/assets/images/round_spritesheet.webp" || "/src/assets/images/round_spritesheet.webp",
         });
         this.movingProgressRemaining = 0;
     }

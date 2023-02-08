@@ -51,8 +51,8 @@ export default class OverworldMap {
 
 window.OverworldMaps = {
     DemoMap: {
-        lowerSrc: "/src/assets/images/background_bottom.webp",
-        upperSrc: "/src/assets/images/background_top.webp",
+        lowerSrc: "./assets/images/background_bottom.webp",
+        upperSrc: "./assets/images/background_top.webp",
         gameObjects: {
             player: new Character({
                 isPlayerControlled: true,
